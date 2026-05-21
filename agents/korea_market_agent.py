@@ -38,7 +38,7 @@ class KoreaMarketAgent:
             'KODEX 반도체': '091160.KS',
             'KODEX 2차전지': '305720.KS',
             'KODEX AI반도체핵심장비': '396500.KS',
-            'KODEX 방산': '457470.KS',
+            'KODEX 방산': '305720.KS',
         })
 
         print("  💱 환율/외환 수집 중...")
