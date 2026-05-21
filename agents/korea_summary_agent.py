@@ -160,7 +160,7 @@ class KoreaSummaryAgent:
 (오늘 국내 시장 핵심을 한 문장으로 정리)"""
 
         message = self.client.messages.create(
-            model='claude-sonnet-4-6', // 최신 모델로 변경
+            model='claude-sonnet-4-6',
             max_tokens=2500,
             messages=[{'role': 'user', 'content': prompt}],
         )

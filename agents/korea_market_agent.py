@@ -59,7 +59,6 @@ class KoreaMarketAgent:
 
         print("  📉 거시지표 수집 중...")
         macro = self._fetch_yf_group({
-            '한국 3년 국채금리': '^KR3YT=RR',
             '미국 10년 국채금리': '^TNX',
             '공포지수 (VIX)': '^VIX',
             '달러지수 (DXY)': 'DX-Y.NYB',
