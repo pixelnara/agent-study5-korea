@@ -2,8 +2,9 @@ name: 한국 주식 일일 브리핑
 
 on:
   schedule:
-    - cron: "0 1 * * 1-5" # 평일 오전 10시 KST (UTC+9 기준)
-  workflow_dispatch: # 수동 실행 버튼도 활성화
+    - cron: "0 * * * *"   # 1시간마다 실행
+
+  workflow_dispatch:
 
 jobs:
   run-briefing:
