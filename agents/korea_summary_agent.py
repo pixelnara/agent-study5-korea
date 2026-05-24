@@ -3,14 +3,14 @@
 - Claude API를 사용해 국내 시장 데이터를 브리핑 형식으로 요약합니다
 """
 
-import anthropic
+from openai import OpenAI
 from datetime import datetime
 import pytz
 import sys
 import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from config import ANTHROPIC_API_KEY
+from config import OPENAI_API_KEY
 
 KST = pytz.timezone('Asia/Seoul')
 
@@ -18,7 +18,7 @@ KST = pytz.timezone('Asia/Seoul')
 class KoreaSummaryAgent:
 
     def __init__(self):
-        self.client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+        self.client = OpenAI(api_key=OPENAI_API_KEY)
 
     def generate(self, market_data: dict, news_data: dict):
         """시장 데이터와 뉴스를 받아 텔레그램 메시지 목록을 반환합니다."""
@@ -161,13 +161,13 @@ class KoreaSummaryAgent:
         ━━━━━━━━━━━━━━━━━━━━━
         (오늘 시장 핵심 한 문장 — 친구한테 말하듯)"""
 
-        message = self.client.messages.create(
-            model='claude-sonnet-4-6',
+        response = self.client.chat.completions.create(
+            model='gpt-4o',
             max_tokens=2500,
             messages=[{'role': 'user', 'content': prompt}],
         )
 
-        return message.content[0].text
+        return response.choices[0].message.content
 
     def _market_to_text(self, market_data: dict) -> str:
         lines = []
