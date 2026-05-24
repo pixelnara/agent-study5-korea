@@ -22,13 +22,9 @@ jobs:
       - name: 패키지 설치
         run: pip install -r requirements.txt
 
-      - name: config.py 생성
-        run: |
-          cat > config.py << EOF
-          OPENAI_API_KEY = "${{ secrets.OPENAI_API_KEY }}"
-          TELEGRAM_BOT_TOKEN = "${{ secrets.TELEGRAM_BOT_TOKEN }}"
-          TELEGRAM_CHAT_ID = "${{ secrets.TELEGRAM_CHAT_ID }}"
-          EOF
-
       - name: 브리핑 실행
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python main.py
