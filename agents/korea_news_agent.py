@@ -52,7 +52,7 @@ RSS_FEEDS = {
         ('SBS 경제', 'https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER'),
         ('한국무역신문', 'https://www.weeklytrade.co.kr/rss/allArticle.xml'),
     ],
-        '뷰티_미용': [
+    '뷰티_미용': [
         ('한국경제 생활', 'https://www.hankyung.com/feed/life'),
         ('매일경제 패션뷰티', 'https://www.mk.co.kr/rss/50100032/'),
         ('뷰티경제', 'https://www.thebk.co.kr/rss/allArticle.xml'),
