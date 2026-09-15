@@ -53,11 +53,9 @@ RSS_FEEDS = {
         ('한국무역신문', 'https://www.weeklytrade.co.kr/rss/allArticle.xml'),
     ],
     '뷰티_미용': [
-        ('한국경제 생활', 'https://www.hankyung.com/feed/life'),
-        ('매일경제 패션뷰티', 'https://www.mk.co.kr/rss/50100032/'),
-        ('뷰티경제', 'https://www.thebk.co.kr/rss/allArticle.xml'),
-        ('코스모닝', 'https://www.cosmorning.com/rss/allArticle.xml'),
-        ('데일리코스메틱', 'https://www.dailycosmetic.com/rss/allArticle.xml'),
+        ('연합뉴스 생활문화', 'https://www.yna.co.kr/rss/culture.xml'),
+        ('한국경제 패션뷰티', 'https://www.hankyung.com/feed/life'),
+        ('매일경제 라이프', 'https://www.mk.co.kr/rss/50100032/'),
     ],
 }
 
