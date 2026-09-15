@@ -3,7 +3,7 @@ name: 한국 주식 일일 브리핑
 on:
   schedule:
     # UTC 기준 (KST = UTC+9): 21:00 UTC = 06:00 KST, 09:00 UTC = 18:00 KST
-    - cron: "0 9,21 * * *"   # 매일 오전 6시 · 오후 6시 (KST)
+    - cron: "0 23,3,11 * * *"   # 매일 오전 8시·오후 12시·오후 8시 (KST)
 
   workflow_dispatch:
 
